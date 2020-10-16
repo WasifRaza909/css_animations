@@ -1,0 +1,237 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #102626;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --webkit-box-reflect: below 1px linear-gradient(#001, #004);
+}
+
+.container .loader {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #0d2323;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container .loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgba(0, 255, 249, 0.4));
+  background-size: 100px 180px;
+  background-repeat: no-repeat;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+
+.container .loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background: #00fff9;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 10px #00fff9, 0 0 20px #00fff9, 0 0 30px #00fff9,
+    0 0 40px #00fff9, 0 0 50px #00fff9, 0 0 60px #00fff9, 0 0 70px #00fff9,
+    0 0 80px #00fff9, 0 0 90px #00fff9, 0 0 100px #00fff9;
+}
+
+.container .loader span {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #102626;
+  border-radius: 50%;
+}
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(235, 14, 14);
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(11, 13, 32);
+  position: relative;
+  top: 50px;
+  border-radius: 50%;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to top, transparent, rgb(11, 13, 32));
+  background-color: rgb(11, 13, 32);
+  background-size: 100px 180px;
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+}
+
+.loader::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background: rgb(233, 233, 233);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0 0 10px rgb(72, 78, 134), 0 0 20px rgb(72, 78, 134),
+    0 0 30px rgb(72, 78, 134), 0 0 40px rgb(72, 78, 134),
+    0 0 50px rgb(72, 78, 134), 0 0 60px rgb(72, 78, 134),
+    0 0 70px rgb(72, 78, 134), 0 0 80px rgb(72, 78, 134),
+    0 0 90px rgb(72, 78, 134);
+}
+
+.loader span {
+  background: rgb(0, 0, 0);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+}
+
+.loader {
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */
+
+.container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .loader {
+  top: 50px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: rgb(253, 253, 253);
+  border-radius: 50%;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 100px;
+  border-top-left-radius: 100px;
+  background: linear-gradient(to top, transparent, rgba(13, 218, 184, 0.8));
+  background-size: 100px 200px;
+}
+
+.loader::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: rgb(45, 119, 107);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 10;
+  border-radius: 50%;
+  /* box-shadow: 0 0 10px rgb(20, 22, 21), 0 0 20px rgb(72, 78, 134),
+    0 0 30px rgb(20, 22, 21), 0 0 40px rgb(20, 22, 21), 0 0 50px rgb(20, 22, 21),
+    0 0 60px rgb(20, 22, 21), 0 0 70px rgb(20, 22, 21), 0 0 80px rgb(20, 22, 21),
+    0 0 90px rgb(20, 22, 21); */
+}
+
+.loader span {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(3, 3, 3);
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+}
+
+.loader {
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
